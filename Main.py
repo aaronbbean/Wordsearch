@@ -3,6 +3,7 @@ from random import *
 class ws():
   def __init__(self):
     self.board = []
+    #Put the words you want hidden in the word search in hiddenWords
     self.hiddenWords = [
         "test"
     ]
@@ -107,11 +108,6 @@ class ws():
     NewWord = choice(choosinglist)
     self.HiddenWordNumber.append(NewWord)
 
-  def PlaceWords(self):
-    for words in self.hiddenWords:
-      pass
-    pass
-
   def wordCheck(self):
 
     checked = []
@@ -198,7 +194,8 @@ class ws():
         self.BoardPlacment(words)
       self.wordCheck()
 game = ws()
-game.MakeBoard(16)
+#Put the size on the board you want in MakeBaord
+game.MakeBoard(5)
 game.GameSetUp()
 game.placeLetters()
 game.printBoard()
